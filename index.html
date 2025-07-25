@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ZK Role Prover</title>
+  
+  <!-- External Libraries -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="gradient-bg min-h-screen flex items-center justify-center p-4">
+  <!-- Background Pattern -->
+  <div class="absolute inset-0 opacity-10">
+    <div class="absolute top-10 left-10 w-32 h-32 bg-white rounded-full blur-xl"></div>
+    <div class="absolute bottom-10 right-10 w-48 h-48 bg-white rounded-full blur-xl"></div>
+    <div class="absolute top-1/2 left-1/4 w-24 h-24 bg-white rounded-full blur-lg"></div>
+  </div>
+  
+  <!-- Main Container -->
+  <div class="relative z-10 glass-effect rounded-3xl p-8 w-full max-w-md shadow-2xl floating-animation">
+    <!-- Header -->
+    <div class="text-center mb-8">
+      <div class="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-2xl mb-4 icon-bounce">
+        <i class="fas fa-shield-alt text-2xl text-white"></i>
+      </div>
+      <h2 class="text-3xl font-bold text-gray-800 mb-2">ZK Role Prover</h2>
+      <p class="text-gray-600 text-sm">Secure zero-knowledge proof generation</p>
+    </div>
+    
+    <!-- Form -->
+    <form id="zkForm" method="POST" action="/" class="space-y-6">
+      <!-- Email Field -->
+      <div class="space-y-2">
+        <label for="email" class="flex items-center text-sm font-semibold text-gray-700">
+          <i class="fas fa-envelope text-blue-600 mr-2"></i>
+          Email Address
+        </label>
+        <div class="relative">
+          <input 
+            type="text" 
+            id="email" 
+            name="email" 
+            placeholder="alice@it.company.com" 
+            required 
+            class="input-focus w-full px-4 py-3 pl-12 border-2 border-gray-200 rounded-xl focus:border-blue-500 focus:outline-none text-gray-700 placeholder-gray-400"
+          />
+          <i class="fas fa-user absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
+        </div>
+      </div>
+      
+      <!-- Secret Field -->
+      <div class="space-y-2">
+        <label for="secret" class="flex items-center text-sm font-semibold text-gray-700">
+          <i class="fas fa-key text-purple-600 mr-2"></i>
+          Secret Key
+        </label>
+        <div class="relative">
+          <input 
+            type="password" 
+            id="secret" 
+            name="secret" 
+            placeholder="Enter your secret key" 
+            required 
+            class="input-focus w-full px-4 py-3 pl-12 pr-12 border-2 border-gray-200 rounded-xl focus:border-purple-500 focus:outline-none text-gray-700 placeholder-gray-400"
+          />
+          <i class="fas fa-lock absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
+          <button 
+            type="button" 
+            id="toggleSecret" 
+            class="absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-600 focus:outline-none"
+          >
+            <i class="fas fa-eye"></i>
+          </button>
+        </div>
+      </div>
+      
+      <!-- Submit Button -->
+      <button 
+        type="submit" 
+        class="btn-gradient w-full py-4 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl focus:outline-none focus:ring-4 focus:ring-blue-300 focus:ring-opacity-50"
+      >
+        <i class="fas fa-cog mr-2"></i>
+        Generate Proof Input
+      </button>
+    </form>
+    
+    <!-- Status Message -->
+    <div id="status" class="mt-6 text-center font-medium text-sm"></div>
+    
+    <!-- Footer -->
+    <div class="mt-8 pt-6 border-t border-gray-200">
+      <p class="text-center text-xs text-gray-500">
+        <i class="fas fa-info-circle mr-1"></i>
+        https://github.com/trannhatbuilder
+      </p>
+    </div>
+  </div>
+
+  <link rel="stylesheet" href="script.js">
+  
+</body>
+</html>
