@@ -21,14 +21,13 @@ A modern web browser is required to view the HTML file.
     ```
 3.  Use the `git clone` command followed by the URL of your Git repository:
     ```bash
-    git clone <YOUR_REPOSITORY_URL.git>
+    git clone [<YOUR_REPOSITORY_URL.git>](https://github.com/trannhatbuilder/web_zk_prover.git)
     ```
-    *Replace `<YOUR_REPOSITORY_URL.git>` with the actual URL of your Git repository (e.g., `https://github.com/yourusername/your-repo-name.git`).*
+
 4.  Change directory into the cloned repository folder:
     ```bash
-    cd <your-repository-name>
+    cd web_zk_prover
     ```
-    *Replace `<your-repository-name>` with the actual name of the folder created by the `git clone` command.*
 
 ### Viewing the Application
 
